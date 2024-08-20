@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ font-family: Sora;
+}
+
+
+
+body {
+    background-color: rgb(220, 237, 255);
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.container {
+    background-color: pink;
+    border: solid black 2px;
+    height: 600px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    justify-content: start;
+   
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .logo p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.navbar .menu ul a {
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+    font-weight: 600;
+}
+
+.navbar .menu button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(255, 121, 121);
+    color: white;
+}
+
+.navbar .menu button:hover {
+    background-color: rgb(251, 94, 94);
+    cursor: pointer;
+}
+
+
+
+
+.gridContainer {
+    background-color: rgb(203, 193, 255);
+    height: 800px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    grid-template-rows: repeat(6, 1fr);
+
+    border: solid black 2px;
+}
+
+
+.item1{
+    background-color: aquamarine;
+    grid-column: 1/6 ;
+    grid-row: 1/2;
+    /* order: 4; */
+  
+}
+.item2{
+    background-color: rgb(144, 127, 255);
+    grid-column: 1/2;
+    grid-row: 2/6;
+    /* order: 1; */
+   
+}
+.item3{
+    background-color: rgb(255, 255, 127);
+    grid-column: 2/4;
+    grid-row: 2/4;
+    /* order: 2; */
+  
+}
+.item4{
+    background-color: rgb(255, 127, 127);
+    grid-column: 4/6;
+    grid-row: 2/4;
+   
+    /* order: 5; */
+}
+.item5{
+    background-color: rgb(127, 229, 255);
+    grid-column:2/4;
+    grid-row: 4/6;
+  
+    /* order: 3; */
+}
+
+.item6{
+
+    grid-column:4/6;
+    grid-row: 4/6;
+
+}
+.item7 {
+
+    grid-column: 1/6;
+   
+}
+.item {
+    width: 100%;
+
+    border: solid black 2px;
+  
+}
+
+
+.gridArea {
+    background-color: rgb(250, 199, 199);
+    margin-top: 30px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    
+    "navbar navbar navbar navbar navbar "
+    "sidebar c1 c1 c2 c2"
+    "sidebar c1 c1 c2 c2"
+    "sidebar c3 c3 c4 c4"
+    "sidebar c3 c3 c4 c4"
+    "footer footer footer footer footer"
+    
+    
+    
+    ;
+}
+
+.element {
+    width: 100%;
+    background-color: white ;
+    border: solid black 2px;
+}
+.element1 {
+   grid-area: navbar ;
+   background-color: brown;
+}
+.element2 {
+    grid-area: sidebar ;
+    background-color: blue;
+}
+.element3 {
+    grid-area: c1 ;
+    background-color: indigo;
+}
+.element4 {
+    grid-area: c2 ;
+    background-color: green;
+}
+.element5 {
+    grid-area: c3 ;
+    background-color: yellow;
+}
+.element6 {
+    grid-area: c4 ;
+    background-color: orange;
+}
+
+.element7 {
+    grid-area: footer ;
+    background-color: black;
+}
+
+
+/* we will work on mobile */
+
+@media    (max-width : 630px)       {
+
+
+ body {
+    background-color: chartreuse;
+
+ }
+
+
+ .navbar {
+    flex-direction: column;
+    justify-content: center;
+ }
+
+
+
+}
+
+
+/* we will work on tablette  */
+@media (min-width : 631px) and (max-width : 800px)  {
+
+    body {
+        background-color: rgb(177, 8, 36);
+     }
+
+
+
+
+
+}
+
